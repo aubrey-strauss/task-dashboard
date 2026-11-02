@@ -1,10 +1,12 @@
 import type { TaskItemProps } from "../../types";
 
-// write a component called TaskItem that shows the task’s title, description, priority, and due date
 export default function TaskItem({
   task,
   onStatusChange,
   onDelete,
+  // onEdit(task) sends everything about the task (title, description, and so on)
+  // so the form can show its current values for you to change.
+  onEdit,
 }: TaskItemProps) {
   return (
     <li className={`task-item ${task.status} ${task.priority}`}>
@@ -21,6 +23,8 @@ export default function TaskItem({
       <button onClick={() => onStatusChange(task.id, "completed")}>
         Completed
       </button>
+      {/* Add button for onEdit */}
+      <button onClick={() => onEdit(task)}>Edit</button>
       <button onClick={() => onDelete(task.id)}>Delete</button>
     </li>
   );
