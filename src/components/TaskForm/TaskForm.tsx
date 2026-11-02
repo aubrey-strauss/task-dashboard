@@ -33,6 +33,7 @@ export default function TaskForm({
       }}
     >
       <label>
+        Title:
         <input
           type="text"
           name="title"
@@ -42,6 +43,7 @@ export default function TaskForm({
         />
       </label>
       <label>
+        Description:
         <textarea
           name="description"
           placeholder="Description"
