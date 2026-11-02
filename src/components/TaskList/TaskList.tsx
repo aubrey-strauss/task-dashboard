@@ -7,6 +7,7 @@ export default function TaskList({
   tasks,
   onStatusChange,
   onDelete,
+  onEdit,
 }: TaskListProps) {
   return (
     <ul>
@@ -18,6 +19,7 @@ export default function TaskList({
           task={task}
           onStatusChange={onStatusChange}
           onDelete={onDelete}
+          onEdit={onEdit}
         />
       ))}
     </ul>
